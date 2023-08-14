@@ -1,10 +1,10 @@
-//second largest element in array
+//smallest element in array
 #include <iostream>
 #include <limits.h>
 using namespace std;
 int main()
 {
-    int max = INT_MIN;
+    int min = INT_MAX;
     int n;
     cin >> n;
     int arr[n];
@@ -12,20 +12,10 @@ int main()
         cin >> arr[i];
     for (int i = 0; i < n; i++)
     {
-        if (arr[i] > max){
-            max = arr[i];
-        }
-        
-
-
-
+        if (arr[i] < min)
+            min = arr[i];
     }
-    cout << max;
-    for(int i = 0 ; i < n ;i++){
-        if (arr[i] > max)
-            max = arr[i];
-    }
-    cout << max;
+    cout << min;
 
     return 0;
 }
